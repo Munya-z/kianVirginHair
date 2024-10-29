@@ -1,0 +1,86 @@
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+        z-index: 100;
+        width: 100vw;
+        background-color: var(--gray-color);
+        position: fixed;
+        top:0;
+        
+        .nav-logo {
+            width: 60px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .nav-links{
+            ul{
+                li{
+                    list-style: none;
+                    display: inline;
+                    padding-inline:.5rem;
+                    
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline 2px var(--primary-color);
+                        text-underline-offset: 5px;
+                        color: var(--black-color);
+                    }
+                }
+            }
+        }
+
+    }
+    .dropdown-toggler, .dropdown-menu{
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav-links{
+            display: none;
+        }
+        .dropdown-toggler{
+            display: block;
+            
+           
+        }
+
+        .dropdown-menu{
+            &.open{
+                display: block;
+            } 
+            position: fixed;
+            z-index: 99;
+            top:0;
+            right:0;
+            background-color: var(--gray-color);
+            color: var(--black-color);
+            width: 50vw;
+            min-width: 250px;
+            height: 100svh;
+            ul{
+                height: 100svh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2rem;
+                li{
+                    list-style: none;
+                    padding-inline:.5rem;
+
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline 2px var(--primary-color);
+                        text-underline-offset: 5px;
+                   
+                    }
+                }
+            }
+
+        }
+    }

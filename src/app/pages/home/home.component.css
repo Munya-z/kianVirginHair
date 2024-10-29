@@ -1,0 +1,53 @@
+
+    .about-us{
+        position: relative;
+        overflow: hidden;
+        min-height: 70svh;
+        padding: 2rem 5vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: start;
+        justify-content: center; 
+        
+        .info{
+            backdrop-filter: blur(10px);
+            background-color: rgba(254, 230, 230, 0.564);
+            padding: 2rem 5%;
+            border-radius: 10px;
+            width: 80vw;
+            max-width: 900px;
+            margin: auto;
+
+            
+            div{
+              /* width: max-content; */
+              max-width: 600px;
+              margin-inline: auto;
+            }
+        }
+
+
+        h2{
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        button{
+            padding: .5rem 1rem;
+            margin-top: 1rem;
+            background: black;
+            border: none;
+            color: white;
+            text-align: start;
+            display: flex;
+            align-items: center;
+            &:hover{
+                cursor: pointer;
+                background: white;
+                color: rgb(16, 10, 10);
+            }
+
+        }
+    }

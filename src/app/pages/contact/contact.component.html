@@ -1,0 +1,42 @@
+<section class="contact-container">
+    <div class="page-header">
+        <h2>contact us </h2>
+        <p class="desc-text">we would love to hear from you </p>
+    </div>
+
+    <hr>
+    <form [formGroup]="contactForm" >
+        <p class="huge-text">
+            send us a message
+        </p> 
+        <div>
+            <label for="name">name</label>
+            <input type="text" formControlName="name" id="name" placeholder="enter your name">
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="email" formControlName="email" id="email" placeholder="enter your email">
+        </div>
+        <div>
+            <label for="phone">phone</label>
+            <input type="tel" formControlName="phone" id="phone" placeholder="enter your phone number">
+        </div>
+        <div>
+            <label for="message">message</label>
+            <textarea formControlName="message" id="message" cols="30" rows="10" placeholder="enter your message"></textarea>
+        </div>
+        <button (click)="onSubmit()">Send</button>
+    </form>   
+
+    <hr>
+    <div class="map">
+        <h2>
+            where to find us
+        </h2>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.053121672671!2d28.001049975793936!3d-26.097184559624704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957496497e865d%3A0x57bf611fbe7de122!2s283%20Pretoria%20Ave%2C%20Ferndale%2C%20Randburg%2C%202194!5e0!3m2!1sen!2sza!4v1730231731559!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+</section>
+

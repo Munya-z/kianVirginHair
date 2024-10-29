@@ -1,0 +1,119 @@
+    .about-component {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap:2rem;
+        background-color: var(--white-color);
+        border-radius: var(--border-radius);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .business-desc, .mission-statement, .vision, .founder{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h2{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .card{
+                position: relative;
+                border-radius: var(--border-radius);
+                min-width: 180px;
+                
+                
+                margin: 10px;
+                z-index: 1;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border: 2px solid var(--secondary-color);
+                transform:skewX(2deg) skewY(2deg);
+               
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    border-radius: var(--border-radius);
+                    background-color: pink;
+                    left: 50%;
+                    top: 50%;
+                    z-index: -3;
+                    padding: .6rem;
+                    transform:translate(-50%, -50%) skewX(-2deg) skewY(-2deg);
+                    
+                }
+            }
+        }
+
+        .business-desc, .founder{
+            max-width: 900px;
+            color: var(--white-color);
+            padding: 2rem 10%;
+            background-color: var(--tertiary-color);
+
+            .info{
+                width: 50%;
+            }
+
+            .card{
+                width: 45vmin;
+                aspect-ratio: 1;
+            }
+
+            .card img{
+                width: 100%;
+                height: 100%;
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-direction: column-reverse;
+                .info{
+                    width: 100%;
+                }
+
+                .card{
+                    width: 80vw;
+                    margin: 0 auto 2rem;
+                    max-width: 300px;
+                }
+            }
+        }
+
+        .huge-text{
+            width: 80vw;
+            margin: auto;
+        }
+
+        .mission-vision{
+            max-width: 900px;
+            display: flex;
+            padding: 2rem 10%;
+            gap:1rem;
+
+            
+
+            .mission-statement, .vision{
+                border-radius: var(--border-radius);
+                padding: 2rem 5%;
+                border: 2px solid var(--secondary-color);
+                transform:skewX(2deg) skewY(2deg);
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-direction: column-reverse;
+                width: 90%;
+            }
+        }
+
+        .founder{
+            .card{
+                overflow: hidden;
+                &::before{
+                    background-color: unset;
+                }
+            }
+
+        }
+    }
